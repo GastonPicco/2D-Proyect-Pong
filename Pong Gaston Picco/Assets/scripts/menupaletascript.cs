@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class menupaletascript : MonoBehaviour
 {
-    float i;
     public float r;
-    public float velociadad, vector;
+    public float velociadad;
     public campos ypos;
     bool canmove = true;
     bool disparo = false;
@@ -20,28 +19,26 @@ public class menupaletascript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        velociadad = vector * Time.deltaTime;
         ypos = FindObjectOfType<campos>();
         //Debug.Log(ypos.Ypos);
         if (Input.GetKey("up") && (gameObject.transform.position.y < 10.5)&&(ypos.Ypos == 8) && (canmove == true))
         {
-            i = transform.position.y + velociadad;
-            transform.position = new Vector3(transform.position.x, i, 0);
+
+            transform.position = new Vector3(transform.position.x, transform.position.y + velociadad * Time.fixedDeltaTime, transform.position.z);
 
             if (r > -5)
             {
-                r = r - 0.1f;
+                r = r - 100f * Time.deltaTime;
             }
         }
         if (Input.GetKey("down") && (gameObject.transform.position.y > 5.5) && (ypos.Ypos == 8) && (canmove == true))
         {
-            i = transform.position.y - velociadad;
-            transform.position = new Vector3(transform.position.x, i, 0);
+            transform.position = new Vector3(transform.position.x, transform.position.y + - velociadad * Time.fixedDeltaTime, transform.position.z);
             if (r < 5)
             {
-                r = r + 0.1f;
+                r = r + 100f * Time.deltaTime;
             }
         }
         if (Input.GetKey("up") && (ypos.Ypos == 8) && (canmove == true))
@@ -59,9 +56,7 @@ public class menupaletascript : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             disparo = true;
-            canmove = false;
-            
-           
+            canmove = false;   
         }
         if (disparo == true)
         {

@@ -7,7 +7,6 @@ public class Movimientos : MonoBehaviour
 {
     
     // Start is called before the first frame update
-    float i;
     public float r;
     public float velociadad;
     public campos ypos;
@@ -24,12 +23,10 @@ public class Movimientos : MonoBehaviour
     {
         ypos = FindObjectOfType<campos>();
         //Debug.Log(ypos.Ypos);
-        velociadad = 5 * Time.deltaTime;
         if (Input.GetKey("up")&&(gameObject.transform.position.y < 2.5) && (ypos.Ypos <= 1) && (ypos.Ypos >= -1) && (canmove == true))
         {
-            i = transform.position.y + velociadad;
-            transform.position = new Vector3(transform.position.x, i , 0);
-            
+            transform.position = new Vector3(transform.position.x, transform.position.y + velociadad * Time.deltaTime, transform.position.z);
+
             if (r > -5)
             {
                 r = r - 100f *Time.deltaTime;
@@ -37,8 +34,7 @@ public class Movimientos : MonoBehaviour
         }
         if (Input.GetKey("down")&&(gameObject.transform.position.y > -2.5) && (ypos.Ypos <= 1) && (ypos.Ypos >= -1) && (canmove == true))
         {
-            i = transform.position.y - velociadad;
-            transform.position = new Vector3(transform.position.x, i , 0);
+            transform.position = new Vector3(transform.position.x, transform.position.y + - velociadad * Time.deltaTime, transform.position.z);
             if (r < 5)
             {
                 r = r + 100f*Time.deltaTime;

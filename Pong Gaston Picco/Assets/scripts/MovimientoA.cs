@@ -6,7 +6,6 @@ public class MovimientoA : MonoBehaviour
 {
     
     // Start is called before the first frame update
-    float i;
     public float velociadad;
     public float r;
     public campos ypos;
@@ -18,14 +17,12 @@ public class MovimientoA : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        velociadad = 5 * Time.deltaTime;
+    {       
         ypos = FindObjectOfType<campos>();
         //Debug.Log(ypos.Ypos);
         if (Input.GetKey("w") && (gameObject.transform.position.y < 2.5) && (ypos.Ypos <= 1) && (ypos.Ypos >= -1) && (canmove == true))
         {
-            i = transform.position.y + velociadad;
-            transform.position = new Vector3(transform.position.x, i, 0);
+            transform.position = new Vector3(transform.position.x, transform.position.y + velociadad * Time.deltaTime, transform.position.z);
 
             if (r > -5)
             {
@@ -34,8 +31,7 @@ public class MovimientoA : MonoBehaviour
         }
         if (Input.GetKey("s") && (gameObject.transform.position.y > -2.5) && (ypos.Ypos <= 1) && (ypos.Ypos >= -1) && (canmove == true))
         {
-            i = transform.position.y - velociadad;
-            transform.position = new Vector3(transform.position.x, i, 0);
+            transform.position = new Vector3(transform.position.x, transform.position.y + -velociadad * Time.deltaTime, transform.position.z);
             if (r < 5)
             {
                 r = r + 100f * Time.deltaTime;

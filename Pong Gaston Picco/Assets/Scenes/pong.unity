@@ -1319,6 +1319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 532770397}
   - component: {fileID: 532770398}
+  - component: {fileID: 532770399}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Untagged
@@ -1393,6 +1394,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &532770399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532770396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443f32a1efcdde4408362235b7783170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &555379004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,7 +1651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   r: 0
-  velociadad: 0
+  velociadad: 5.5
   ypos: {fileID: 0}
 --- !u!1 &686217492
 GameObject:
@@ -1672,8 +1685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   r: 0
-  velociadad: 0
-  vector: 5
+  velociadad: 5.5
   ypos: {fileID: 0}
 --- !u!61 &686217495
 BoxCollider2D:
@@ -1741,7 +1753,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: c10b9f45215bab24687ac8cf37d2a5cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2517,7 +2529,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: be8f7feba25c6594cbc630c9edb3b7f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.57254905}
   m_FlipX: 0
@@ -3587,7 +3599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2565c8bb830ef4c96e93443b353ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velociadad: 0
+  velociadad: 5.5
   r: 0
   ypos: {fileID: 0}
 --- !u!1 &2012146074
