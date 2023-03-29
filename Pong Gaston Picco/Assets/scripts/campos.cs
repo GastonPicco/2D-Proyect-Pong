@@ -25,7 +25,7 @@ public class campos : MonoBehaviour
         CCM = FindObjectOfType<pelotamenu>();
         if ((CCM.CamCanMove == true) && (gameObject.transform.position.y >=0))
         {
-            i = transform.position.y - velocidad;
+            i = transform.position.y - velocidad * Time.deltaTime;
             transform.position = new Vector3(transform.position.x, i, -10);
         }
 
@@ -36,8 +36,8 @@ public class campos : MonoBehaviour
         }
         if (back == true)
         {
-            i = transform.position.y + velocidad* 1.5f;
-            transform.position = new Vector3(transform.position.x, i, -10);
+            i = transform.position.y + velocidad * 1.5f * Time.deltaTime;
+            transform.position = new Vector3(transform.position.x, i , -10);
         }
         if(gameObject.transform.position.y >= 8)
         {

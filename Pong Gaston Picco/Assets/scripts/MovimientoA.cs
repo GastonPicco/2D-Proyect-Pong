@@ -29,7 +29,7 @@ public class MovimientoA : MonoBehaviour
 
             if (r > -5)
             {
-                r = r - 0.1f;
+                r = r - 100f * Time.deltaTime;
             }
         }
         if (Input.GetKey("s") && (gameObject.transform.position.y > -2.5) && (ypos.Ypos <= 1) && (ypos.Ypos >= -1) && (canmove == true))
@@ -38,7 +38,7 @@ public class MovimientoA : MonoBehaviour
             transform.position = new Vector3(transform.position.x, i, 0);
             if (r < 5)
             {
-                r = r + 0.1f;
+                r = r + 100f * Time.deltaTime;
             }
         }
         if (Input.GetKey("w") && (ypos.Ypos <= 1) && (ypos.Ypos >= -1) && (canmove == true))

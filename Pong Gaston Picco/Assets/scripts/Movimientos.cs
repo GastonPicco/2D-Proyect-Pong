@@ -32,7 +32,7 @@ public class Movimientos : MonoBehaviour
             
             if (r > -5)
             {
-                r = r - 0.1f;
+                r = r - 100f *Time.deltaTime;
             }
         }
         if (Input.GetKey("down")&&(gameObject.transform.position.y > -2.5) && (ypos.Ypos <= 1) && (ypos.Ypos >= -1) && (canmove == true))
@@ -41,7 +41,7 @@ public class Movimientos : MonoBehaviour
             transform.position = new Vector3(transform.position.x, i , 0);
             if (r < 5)
             {
-                r = r + 0.1f;
+                r = r + 100f*Time.deltaTime;
             }
         }
         if (Input.GetKey("up") && (ypos.Ypos <= 1) && (ypos.Ypos >= -1) && (canmove == true))
