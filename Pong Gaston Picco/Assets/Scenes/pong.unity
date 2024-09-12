@@ -1792,7 +1792,7 @@ GameObject:
   - component: {fileID: 776327072}
   - component: {fileID: 776327073}
   m_Layer: 0
-  m_Name: paleta sombra
+  m_Name: pallette shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1960,7 +1960,7 @@ GameObject:
   - component: {fileID: 937650525}
   - component: {fileID: 937650526}
   m_Layer: 0
-  m_Name: paleta sombra
+  m_Name: pallette shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2044,7 +2044,7 @@ GameObject:
   - component: {fileID: 962090472}
   - component: {fileID: 962090473}
   m_Layer: 0
-  m_Name: pelotasombra
+  m_Name: ballShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3039,7 +3039,7 @@ GameObject:
   - component: {fileID: 1901082173}
   - component: {fileID: 1901082174}
   m_Layer: 0
-  m_Name: paleta sombra
+  m_Name: pallette shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3487,7 +3487,7 @@ GameObject:
   - component: {fileID: 1959892938}
   - component: {fileID: 1959892939}
   m_Layer: 0
-  m_Name: pallete 2
+  m_Name: pallette 2
   m_TagString: paleta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

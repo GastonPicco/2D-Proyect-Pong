@@ -23,10 +23,13 @@ public class campos : MonoBehaviour
 
         Ypos = transform.position.y;
         CCM = FindObjectOfType<pelotamenu>();
-        if ((CCM.CamCanMove == true) && (gameObject.transform.position.y >=0))
+        if ((CCM.CamCanMove == true) && (gameObject.transform.position.y >0))
         {
             i = transform.position.y - velocidad * Time.deltaTime;
             transform.position = new Vector3(transform.position.x, i, -10);
+            if(transform.position.y < 0){
+                transform.position = new Vector3(transform.position.x, 0, -10);
+            }
         }
 
         if (Input.GetKeyDown("escape"))
